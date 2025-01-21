@@ -4,6 +4,7 @@ import tkinter as tk
 from pytube import Playlist, YouTube
 import os
 from IndividualDownload import IndividualURL
+from AlbumDownload import AlbumURL
 
 
 
@@ -30,7 +31,7 @@ def MainMenu():
     IndividualDonwload.pack(pady=12, padx=10)
 
 
-    PlaylistDownload= ct.CTkButton(master= frame, text= "Album Download")
+    PlaylistDownload= ct.CTkButton(master= frame, text= "Album Download", command= lambda: AlbumURL(frame, BackButton))
     PlaylistDownload.pack(pady=14, padx=10)
 
 
